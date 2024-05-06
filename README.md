@@ -1,31 +1,40 @@
-# Password-Manager-Hosted-In-Cloud
+# Python-Caesar-Cipher
 
 ## Objective
-[Brief Objective - Remove this afterwards]
 
-The Detection Lab project aimed to establish a controlled environment for simulating and detecting cyber attacks. The primary focus was to ingest and analyze logs within a Security Information and Event Management (SIEM) system, generating test telemetry to mimic real-world attack scenarios. This hands-on experience was designed to deepen understanding of network security, attack patterns, and defensive strategies.
+The objective of this project is to implement a Caesar cipher encryption and decryption algorithm in Python. The Caesar cipher is a simple encryption technique in which each letter in the plaintext is shifted a certain number of places down or up the alphabet.
 
 ### Skills Learned
-[Bullet Points - Remove this afterwards]
 
-- Advanced understanding of SIEM concepts and practical application.
-- Proficiency in analyzing and interpreting network logs.
-- Ability to generate and recognize attack signatures and patterns.
-- Enhanced knowledge of network protocols and security vulnerabilities.
-- Development of critical thinking and problem-solving skills in cybersecurity.
+- Understanding encryption algorithms.
+- Manipulating strings in Python.
+- Handling user input and error checking.
+- Implementing modular functions for encryption and decryption.
 
 ### Tools Used
-[Bullet Points - Remove this afterwards]
 
-- Security Information and Event Management (SIEM) system for log ingestion and analysis.
-- Network analysis tools (such as Wireshark) for capturing and examining network traffic.
-- Telemetry generation tools to create realistic network traffic and attack scenarios.
+- Python programming language
+- Text editor (Riplet)
+
 
 ## Steps
-drag & drop screenshots here or use imgur and reference them using imgsrc
 
-Every screenshot should have some text explaining what the screenshot is about.
+1. First, I defined a Python function named caesar that takes three parameters: message, key, and mode.
+The function is responsible for performing Caesar cipher encryption or decryption based on the provided message, encryption/decryption key, and mode.
+<img width="633" alt="image" src="https://github.com/ammaarahadjiet/Password-Manager-Hosted-In-Cloud/assets/115926640/52b37b8b-753f-4158-98e2-c78113b16e16">
 
-Example below.
-
-*Ref 1: Network Diagram*
+2. Inside the caesar function, I initialized a string named LETTERS containing the uppercase letters of the English alphabet.
+I also initialized an empty string named translated to store the encrypted or decrypted message.
+The message input is converted to uppercase to ensure consistency.
+The encryption/decryption key is adjusted using the modulo operator % to keep it within the range of letters (0 to 25).
+Iterate Through Each Character in the Message:
+Using a for loop, I iterated through each character (i) in the input message.
+Calculate Index and Perform Encryption/Decryption:
+For each character i, I found its index in the LETTERS string using the find() method.
+Depending on the specified mode ('encrypt' or 'decrypt'), I shifted the index of the letter to the right or left by the encryption/decryption key.
+If the adjusted index exceeds the length of LETTERS, I wrapped it around to the beginning of the alphabet. Similarly, if it becomes negative, I wrapped it around to the end of the alphabet.
+Build Encrypted/Decrypted Message:
+After adjusting the index of each character, I appended the corresponding letter from the LETTERS string to the translated string.
+Return Translated Message and Test:
+Finally, I returned the translated message from the caesar function.
+I also tested the function by calling it with sample inputs ("CAT", 6, 'encrypt' and "IGZ", 6, 'decrypt') and printing the results to verify the encryption and decryption processes.
